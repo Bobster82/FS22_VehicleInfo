@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="61">
+  <author>Bobster82</author>
+  <title>
+    <en>Vehicle Info</en>
+    <de>Vehicle Info</de>
+  </title>
+  <description>
+    <en><![CDATA[Vehicle Info]]></en>
+    <de><![CDATA[Vehicle Info]]></de>
+  </description>
+  <version>1.0.0.0</version>
+  <multiplayer supported="false" />
+  <iconFilename>store.dss</iconFilename>
+
+  <actions>
+		<action name="viToggleMouse" axisType="HALF" />
+    <action name="viTogglePark" category="VEHICLE" axisType="HALF" />
+		<action name="viSwitchToNextVehicle" axisType="HALF" />
+		<action name="viSwitchToPreviousVehicle" axisType="HALF" />
+    <action name="viOpenSettingsMenu" axisType="HALF" /> 
+		
+	</actions>
+
+  <inputBinding>
+		<actionBinding action="viToggleMouse">
+			<binding device="KB_MOUSE_DEFAULT" input="MOUSE_BUTTON_RIGHT" />
+		</actionBinding>
+    <actionBinding action="viTogglePark">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_q" />
+		</actionBinding>
+		<actionBinding action="viSwitchToNextVehicle">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_tab" />
+		</actionBinding>
+		<actionBinding action="viSwitchToPreviousVehicle">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_lshift KEY_tab" />
+		</actionBinding>
+    <actionBinding action="viOpenSettingsMenu">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_m" />
+		</actionBinding>
+		
+  </inputBinding>
+
+  <l10n>
+      <text name="input_viToggleMouse">
+        <en>VInfo: Mouse on/off</en>
+        <de>VInfo: Mouse on/off</de>
+      </text>
+      <text name="input_viTogglePark">
+        <en>VInfo: Toggle vehicle parking</en>
+        <de>VInfo: Toggle vehicle parking</de>
+		  </text>	
+      <text name="input_viSwitchToNextVehicle">
+        <en>VInfo: Switch to next vehicle</en>
+        <de>VInfo: Switch to next vehicle</de>
+      </text>
+      <text name="input_viSwitchToPreviousVehicle">
+        <en>VInfo: Switch to previous vehicle</en>
+        <de>VInfo: Switch to previous vehicle</de>
+      </text>
+      <text name="input_viOpenSettingsMenu">
+        <en>VInfo: Open the settings menu</en>
+        <de>VInfo: Open the settings menu</de>
+      </text>
+      
+
+  </l10n>
+
+  <extraSourceFiles>
+	  <sourceFile filename="register.lua"/>
+  </extraSourceFiles>
+  
+</modDesc>
