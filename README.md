@@ -30,3 +30,7 @@ I got my inspiration from several mods, credits to: HappyLooser (VehicleInspecto
 
 If you have any issues with the mod or anything related, please contact me on:
 https://github.com/Bobster82/FS22_VehicleInfo
+
+If you like my work and would like to support me:
+
+<a href="https://www.buymeacoffee.com/Bobster82" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-blue.png" alt="Buy Me A Coffee" height="41" width="174"></a>
