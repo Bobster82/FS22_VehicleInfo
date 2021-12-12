@@ -90,6 +90,8 @@ end;
 
 -- onUpdateTick
 function VIData:onUpdateTick()
+    if (self.vi == nil) then return; end;
+
     self.vi.isHelper = (self:getCurrentHelper() ~= nil);
     self.vi.isActive = (self:getIsMotorStarted() or self.vi.isHelper);
     if (self.vi.isParked and self:getLastSpeed() > 1) then
@@ -103,6 +105,8 @@ end;
 
 -- onDelete
 function VIData:onDelete()
+    if (self.vi == nil) then return; end;
+    
     if (VInfo.vehicleList[self.vi.id] == self) then
         VInfo:log("onDelete, name: %s", self:getName())
         table.remove(VInfo.vehicleList, self.vi.id)

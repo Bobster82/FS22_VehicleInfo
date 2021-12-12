@@ -9,7 +9,7 @@
     <en><![CDATA[Vehicle Info]]></en>
     <de><![CDATA[Vehicle Info]]></de>
   </description>
-  <version>1.0.0.0</version>
+  <version>1.0.0.1</version>
   <multiplayer supported="false" />
   <iconFilename>store.dss</iconFilename>
 
