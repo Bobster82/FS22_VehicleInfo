@@ -42,7 +42,7 @@ VInfo = {};
 VInfo.name = "VInfo";
 VInfo.fullName = "Vehicle Info";
 VInfo.author = "Bobster82";
-VInfo.version = "1.0.0.1";
+VInfo.version = "1.0.0.2";
 VInfo.dir = g_currentModDirectory;
 VInfo.hudName = "VINFO_HUD";
 

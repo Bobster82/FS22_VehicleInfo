@@ -9,7 +9,7 @@
     <en><![CDATA[Vehicle Info]]></en>
     <de><![CDATA[Vehicle Info]]></de>
   </description>
-  <version>1.0.0.1</version>
+  <version>1.0.0.2</version>
   <multiplayer supported="false" />
   <iconFilename>store.dss</iconFilename>
 
@@ -30,10 +30,10 @@
 			<binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_q" />
 		</actionBinding>
 		<actionBinding action="viSwitchToNextVehicle">
-			<binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_tab" />
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_tab" />
 		</actionBinding>
 		<actionBinding action="viSwitchToPreviousVehicle">
-			<binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_lshift KEY_tab" />
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_tab" />
 		</actionBinding>
     <actionBinding action="viOpenSettingsMenu">
 			<binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_m" />
