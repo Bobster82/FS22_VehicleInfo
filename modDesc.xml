@@ -4,10 +4,12 @@
   <title>
     <en>Vehicle Info</en>
     <de>Vehicle Info</de>
+    <it>Vehicle Info</it>
   </title>
   <description>
     <en><![CDATA[Vehicle Info]]></en>
     <de><![CDATA[Vehicle Info]]></de>
+    <it><![CDATA[Info Veicolo]]></it>
   </description>
   <version>1.0.0.2</version>
   <multiplayer supported="false" />
@@ -45,22 +47,27 @@
       <text name="input_viToggleMouse">
         <en>VInfo: Mouse on/off</en>
         <de>VInfo: Mouse on/off</de>
+        <it>VInfo: Mouse on/off</it>
       </text>
       <text name="input_viTogglePark">
         <en>VInfo: Toggle vehicle parking</en>
         <de>VInfo: Toggle vehicle parking</de>
-		  </text>	
+	<it>VInfo: Attiva/disattiva parcheggio del veicolo</it>
+      </text>	
       <text name="input_viSwitchToNextVehicle">
         <en>VInfo: Switch to next vehicle</en>
         <de>VInfo: Switch to next vehicle</de>
+        <it>VInfo: Passa al veicolo successivo</it>
       </text>
       <text name="input_viSwitchToPreviousVehicle">
         <en>VInfo: Switch to previous vehicle</en>
         <de>VInfo: Switch to previous vehicle</de>
+        <it>VInfo: Passa al veicolo precedente</it>
       </text>
       <text name="input_viOpenSettingsMenu">
         <en>VInfo: Open the settings menu</en>
         <de>VInfo: Open the settings menu</de>
+        <it>VInfo: Apri il menù delle impostazioni</it>
       </text>
       
 
