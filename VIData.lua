@@ -108,8 +108,11 @@ function VIData:onDelete()
     if (self.vi == nil) then return; end;
     
     if (VInfo.vehicleList[self.vi.id] == self) then
-        VInfo:log("onDelete, name: %s", self:getName())
         table.remove(VInfo.vehicleList, self.vi.id)
+        for newId, vehicle in ipairs(VInfo.vehicleList) do
+            -- deleted a vehicle, need to adjust the ids to the current list order
+            vehicle.vi.id = newId;
+        end;
     end;
 end;
 
