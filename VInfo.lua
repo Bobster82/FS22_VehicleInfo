@@ -41,9 +41,7 @@
 VInfo = {};
 VInfo.name = "VInfo";
 VInfo.fullName = "Vehicle Info";
-VInfo.author = "Bobster82";
-VInfo.version = "1.0.0.2";
-VInfo.dir = g_currentModDirectory;
+VInfo.modDir = g_currentModDirectory;
 VInfo.hudName = "VINFO_HUD";
 
 -- Text settings
@@ -119,13 +117,17 @@ addModEventListener(VInfo);
 
 -- FS loadMap
 function VInfo:loadMap()
+    local modDesc = loadXMLFile("modDesc", VInfo.modDir .. "modDesc.xml");
+    VInfo.name = getXMLString(modDesc, "modDesc.title.en");
+    VInfo.version = getXMLString(modDesc, "modDesc.version");
+    VInfo.author = getXMLString(modDesc, "modDesc.author");
     VInfo:log("Vehicle Info, version: %s, Author: %s", VInfo.version, VInfo.author);
     FSBaseMission.registerActionEvents = Utils.appendedFunction(FSBaseMission.registerActionEvents, VInfo.RegisterActionEvents);
 
-    VInfo.images["BG_VInfo"] = VInfo.dir .."Img/BG_VInfo.dds";
-    VInfo.images["BG_Menu"] = VInfo.dir .."Img/BG_Menu.dds";
-    VInfo.images["VI_Icon"] = VInfo.dir .."Img/VI_Icon.dds";
-    VInfo.images["VI_Icon_H"] = VInfo.dir .."Img/VI_Icon_hovered.dds";
+    VInfo.images["BG_VInfo"] = VInfo.modDir .."Img/BG_VInfo.dds";
+    VInfo.images["BG_Menu"] = VInfo.modDir .."Img/BG_Menu.dds";
+    VInfo.images["VI_Icon"] = VInfo.modDir .."Img/VI_Icon.dds";
+    VInfo.images["VI_Icon_H"] = VInfo.modDir .."Img/VI_Icon_hovered.dds";
 
     VInfo.loadStoredXML();
 end;
@@ -372,6 +374,11 @@ end;
 -- Check for key events
 function VInfo:keyEvent( unicode, sym, modifier, isDown )
     self.isModifierPressed = bitAND(modifier, Input.MOD_LALT) > 0;
+    if (sym == 27) then -- Escape key (enter menu), we dont want to be frozen in game menu (prevents using spacebar)
+        if (g_currentMission.isPlayerFrozen) then
+            g_currentMission.isPlayerFrozen = false;
+        end;
+    end;
 end;
 
 -- Check for mouse events
@@ -384,7 +391,9 @@ function VInfo:mouseEvent(posX, posY, isDown, isUp, button)
         if (button == 1 and isUp) then VInfo:LMBDown(); end;-- action
 
         if (g_currentMission.player ~= nil and g_currentMission.player.isEntered) then
-            g_currentMission.isPlayerFrozen = true;
+            if (g_gui.currentGuiName == "") then
+                g_currentMission.isPlayerFrozen = true;
+            end;
         end;
 
     elseif (g_currentMission.isPlayerFrozen) then

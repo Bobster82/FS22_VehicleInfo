@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<modDesc descVersion="61">
+<modDesc descVersion="63">
   <author>Bobster82</author>
   <title>
     <en>Vehicle Info</en>
@@ -11,7 +11,7 @@
     <de><![CDATA[Vehicle Info]]></de>
     <it><![CDATA[Info Veicolo]]></it>
   </description>
-  <version>1.0.0.3</version>
+  <version>1.0.0.4</version>
   <multiplayer supported="false" />
   <iconFilename>store.dss</iconFilename>
 
