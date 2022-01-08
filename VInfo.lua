@@ -118,7 +118,6 @@ addModEventListener(VInfo);
 -- FS loadMap
 function VInfo:loadMap()
     local modDesc = loadXMLFile("modDesc", VInfo.modDir .. "modDesc.xml");
-    VInfo.name = getXMLString(modDesc, "modDesc.title.en");
     VInfo.version = getXMLString(modDesc, "modDesc.version");
     VInfo.author = getXMLString(modDesc, "modDesc.author");
     VInfo:log("Vehicle Info, version: %s, Author: %s", VInfo.version, VInfo.author);

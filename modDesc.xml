@@ -11,7 +11,7 @@
     <de><![CDATA[Vehicle Info]]></de>
     <it><![CDATA[Info Veicolo]]></it>
   </description>
-  <version>1.0.0.4</version>
+  <version>1.0.0.5</version>
   <multiplayer supported="false" />
   <iconFilename>store.dss</iconFilename>
 
