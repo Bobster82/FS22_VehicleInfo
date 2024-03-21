@@ -11,7 +11,7 @@
     <de><![CDATA[Vehicle Info]]></de>
     <it><![CDATA[Info Veicolo]]></it>
   </description>
-  <version>1.0.0.5</version>
+  <version>1.0.0.6</version>
   <multiplayer supported="false" />
   <iconFilename>store.dss</iconFilename>
 
@@ -20,8 +20,8 @@
     <action name="viTogglePark" category="VEHICLE" axisType="HALF" />
 		<action name="viSwitchToNextVehicle" axisType="HALF" />
 		<action name="viSwitchToPreviousVehicle" axisType="HALF" />
-    <action name="viOpenSettingsMenu" axisType="HALF" /> 
-		
+    <action name="viOpenSettingsMenu" axisType="HALF" />
+    <action name="viSetMoveText" axisType="HALF" />
 	</actions>
 
   <inputBinding>
@@ -40,7 +40,10 @@
     <actionBinding action="viOpenSettingsMenu">
 			<binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_m" />
 		</actionBinding>
-		
+
+    <actionBinding action="viSetMoveText">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_y" />
+		</actionBinding>
   </inputBinding>
 
   <l10n>
@@ -52,7 +55,7 @@
       <text name="input_viTogglePark">
         <en>VInfo: Toggle vehicle parking</en>
         <de>VInfo: Toggle vehicle parking</de>
-	<it>VInfo: Attiva/disattiva parcheggio del veicolo</it>
+	      <it>VInfo: Attiva/disattiva parcheggio del veicolo</it>
       </text>	
       <text name="input_viSwitchToNextVehicle">
         <en>VInfo: Switch to next vehicle</en>
@@ -68,6 +71,10 @@
         <en>VInfo: Open the settings menu</en>
         <de>VInfo: Open the settings menu</de>
         <it>VInfo: Apri il menù delle impostazioni</it>
+      </text>
+      <text name="input_viSetMoveText">
+        <en>VInfo: SET Move the text</en>
+        <de>VInfo: SET Move the text</de>
       </text>
       
 

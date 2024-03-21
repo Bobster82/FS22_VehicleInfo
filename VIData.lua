@@ -40,7 +40,8 @@ function VIData.registerEventListeners(vehicleType)
 		"saveToXMLFile",
 		"onRegisterActionEvents",
 		"onUpdateTick",
-        "onLoadFinished"
+        "onLoadFinished",
+        "onAutoDriveParked"
 	};
 
 	for _, v in ipairs(functionNames) do
@@ -88,14 +89,18 @@ function VIData:cameraMovement()
     self.vi.lastMouseState = VInfo.isMouseActive;
 end;
 
+function VIData:onAutoDriveParked()
+    if (VInfo.settings.autoParkWithAD) then self.vi.isParkedAD = true; end;
+end;
+
 -- onUpdateTick
 function VIData:onUpdateTick()
     if (self.vi == nil) then return; end;
 
-    self.vi.isHelper = (self:getCurrentHelper() ~= nil);
-    self.vi.isActive = (self:getIsMotorStarted() or self.vi.isHelper);
-    if (self.vi.isParked and self:getLastSpeed() > 1) then
+    if (self.vi.isParked and self:getLastSpeed() > 1 and not self.vi.isParkedAD) then
         self.vi.isParked = false;
+    elseif (self.vi.isParkedAD and self:getLastSpeed() < 1) then
+        self.vi.isParkedAD = false; VIData.togglePark(self, true);
     end;
 
     if (self.vi.lastMouseState ~= VInfo.isMouseActive) then
