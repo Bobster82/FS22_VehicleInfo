@@ -10,6 +10,7 @@ Vehicle Info shows information about your vehicles and attachments, active/helpe
 ## How to use:
 * Press 'right mouse button' to (de)activate the mouse cursor.
 * Press 'left ALT + m' key to open the settings menu (close it with selecting '[X]close').
+* Press 'left ALT + y' key to move the text (text color will change to red, press again to stop).
 * Change menu settings by clicking on the text.
 * Click on the text to switch to the vehicle.
 * Press 'Tab' key to switch to the next vehicle in the list, <br>
